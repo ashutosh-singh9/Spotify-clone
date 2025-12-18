@@ -15,6 +15,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      user-select: none;
+
       /* background-image: url(WhatsApp\ Image\ 2025-12-12\ at\ 5.12.41\ PM.jpeg); */
       /* background-size: auto; */
       background-image: url(/resources/bglogsign.jpeg);
@@ -33,28 +35,26 @@
           rgba(35, 70, 15, 0.911) 50%,
           rgba(72, 73, 75, 0.877) 100%);
       backdrop-filter: blur(6px); */
-      
-      background: radial-gradient(
-        circle at top,
-        rgba(30, 215, 96, 0.18),
-        rgba(0, 0, 0, 0.75) 65%
-        );
-        background-color: rgba(0,0,0,0.3);
+
+      background: radial-gradient(circle at top,
+          rgba(30, 215, 96, 0.18),
+          rgba(0, 0, 0, 0.75) 65%);
+      background-color: rgba(0, 0, 0, 0.3);
 
 
-backdrop-filter: blur(12px) saturate(160%) ;
-/* -webkit-backdrop-filter: blur(12px) saturate(160%); */
+      backdrop-filter: blur(12px) saturate(160%);
+      /* -webkit-backdrop-filter: blur(12px) saturate(160%); */
 
-border: 1px solid rgba(255, 255, 255, 0.15);
-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
 
       padding: 0px 30px 30px 30px;
       width: 400px;
       height: 450px;
       border-radius: 20px;
-      
+
       box-shadow: 5px 5px 20px #48494b;
-      transition: all 0.3s ease-in-out ;
+      transition: all 0.3s ease-in-out;
     }
 
     .card:hover {
