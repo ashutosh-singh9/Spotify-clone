@@ -1,141 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    <style>
-            body {
-              font-family: "Times New Roman", Times, serif;
-              padding: 0;
-              margin: 0;
-              background-color: #f5f5dc;
-              height: 100vh;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              /* background-image: url(WhatsApp\ Image\ 2025-12-12\ at\ 5.12.41\ PM.jpeg); */
-              /* background-size: auto; */
-              background-image: url(/resources/bglogsign.jpeg);
-              background-size: cover;
-            }
-            .card {
-              /* background-color: #2e2f34; */
-              /* background-image: radial-gradient(circle,black 0%, #48494b 100%); */
-              background-image: radial-gradient(
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      padding: 0;
+      margin: 0;
+      background-color: #f5f5dc;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background-image: url(WhatsApp\ Image\ 2025-12-12\ at\ 5.12.41\ PM.jpeg); */
+      /* background-size: auto; */
+      background-image: url(/resources/bglogsign.jpeg);
+      background-size: cover;
+    }
+
+    .card {
+      /* background-image: radial-gradient(
                 circle,
                 black 0%,
                 rgb(24, 34, 18) 50%,
                 #48494b 100%
-              );
-              
+              ); */
+      /* background-image: radial-gradient(circle,
+          rgba(0, 0, 0, 0.856) 0%,
+          rgba(35, 70, 15, 0.911) 50%,
+          rgba(72, 73, 75, 0.877) 100%);
+      backdrop-filter: blur(6px); */
+      
+      background: radial-gradient(
+        circle at top,
+        rgba(30, 215, 96, 0.18),
+        rgba(0, 0, 0, 0.75) 65%
+        );
+        background-color: rgba(0,0,0,0.3);
 
-              padding: 0px 30px 30px 30px;
-              width: 400px;
-              height: 450px;
-              border-radius: 20px;
-              transform: scale(1);
-              box-shadow: 5px 5px 20px #48494b;
-              transition: transform 0.3s ease-in-out;
-            }
-            /* .cardLig{
-              background-color: #ffffff23;
-              backdrop-filter: blur(10px);
-            } */
-            .card:hover {
-              /* transform: scale(1.05); */
-              box-shadow: 7px 7px 25px #48494b;
-            }
-            .logoImg {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-            #logo {
-              width: 45%;
-              padding: 40px;
-            }
 
-            ul {
-              list-style-type: none;
-              display: flex;
-              justify-content: space-around;
-              margin: 0;
-              padding: 30px 70px;
-            }
-            li {
-              display: inline;
-            }
-            .nav {
-              text-decoration: none;
-              color: aliceblue;
-              position: relative;
-              font-weight: bold;
-            }
-            .nav::after {
-              content: "";
-              position: absolute;
-              height: 2px;
-              width: 100%;
-              bottom: 0;
-              left: 0;
-              background-color: #00ef5f;
-              transform: scaleX(0);
-              transition: transform 0.3s ease-in-out;
-            }
-            .nav:hover::after {
-              transform: scaleX(1);
-            }
-            .form {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            }
-            /* .fms{
+backdrop-filter: blur(12px) saturate(160%) ;
+/* -webkit-backdrop-filter: blur(12px) saturate(160%); */
+
+border: 1px solid rgba(255, 255, 255, 0.15);
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+
+      padding: 0px 30px 30px 30px;
+      width: 400px;
+      height: 450px;
+      border-radius: 20px;
+      
+      box-shadow: 5px 5px 20px #48494b;
+      transition: all 0.3s ease-in-out ;
+    }
+
+    .card:hover {
+      backdrop-filter: blur(18px) saturate(160%);
+      box-shadow: 7px 7px 25px #48494b;
+    }
+
+    .logoImg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #logo {
+      width: 45%;
+      padding: 40px;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      margin: 0;
+      padding: 30px 70px;
+    }
+
+    li {
+      display: inline;
+    }
+
+    .nav {
+      text-decoration: none;
+      color: aliceblue;
+      position: relative;
+      font-weight: bold;
+    }
+
+    .nav::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: #00ef5f;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .nav:hover::after {
+      transform: scaleX(1);
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* .fms{
           padding: 10px 30px;
           border-radius: 20px;
           margin: 10px;
       } */
-            .fms {
-              width: 80%;
-              padding: 12px 20px;
-              border-radius: 20px;
-              margin: 10px 0;
-              border: none;
-            }
-            .checkBoxRow input {
-              accent-color: #00ef5f;
-            }
-            .checkBoxRow label {
-              color: aliceblue;
-              margin-left: 5px;
-            }
-            button {
-              width: 85%;
-              padding: 12px;
-              border-radius: 20px;
-              margin-top: 10px;
-              background-color: #00ef5f;
-              border: none;
-              font-weight: bold;
-              cursor: pointer;
-            }
+    .fms {
+      width: 80%;
+      padding: 12px 20px;
+      border-radius: 20px;
+      margin: 10px 0;
+      border: none;
+    }
 
-            button:hover {
-              background-color: #aff7a1;
-              color: black;
-            }
+    .checkBoxRow input {
+      accent-color: #00ef5f;
+    }
 
-            .form a {
-              margin-top: 15px;
-              color: #00ef5f;
-              text-decoration: none;
-            }
+    .checkBoxRow label {
+      color: aliceblue;
+      margin-left: 5px;
+    }
 
-            .form a:hover {
-              text-decoration: underline;
-            }
-            /* .logoImg p{
+    button {
+      width: 85%;
+      padding: 12px;
+      border-radius: 20px;
+      margin-top: 10px;
+      background-color: #00ef5f;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #aff7a1;
+      color: black;
+    }
+
+    .form a {
+      margin-top: 15px;
+      color: #00ef5f;
+      text-decoration: none;
+    }
+
+    .form a:hover {
+      text-decoration: underline;
+    }
+
+    /* .logoImg p{
               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
               position: absolute;
               top: 0;
@@ -143,93 +170,86 @@
               font-weight: bolder;
               color: #00ef5f;
             } */
-            .hid{
-              display: none;
-            }
-            @media (max-width: 500px) {
-              body {
-                align-items: flex-start;
-                padding-top: 20px;
-                min-height: 100svh;
-              }
-              .card {
-                width: 90%;
-                max-width: 350px;
-                height: auto;
-                padding: 20px;
-                border-radius: 16px;
-              }
-              #logo {
-                width: 55%;
-                padding: 20px;
-              }
-
-              ul {
-                padding: 30px 30px;
-                font-size: 14px;
-              }
-              .fms {
-                font-size: 14px;
-              }
-
-              button {
-                font-size: 14px;
-              }
-
-              .form a {
-                font-size: 13px;
-              }
-            }
-            @media(min-width : 300px) and (max-width : 400px){
-        .card{
-          width: 80%;
-        }
-        
+    .hid {
+      display: none;
     }
-    </style>
-  </head>
-  <body>
-    <div class="card cardLig">
-      <div class="logoImg">
-        <img id="logo" src="/resources/download.png" alt="Spotify logo" />
-        <!-- <p>Login</p> -->
-      </div>
-      <ul>
-        <li><a class="nav" href="index.html">LOG IN</a></li>
-        <li><a class="nav" href="/mains/signup.html">SIGN UP</a></li>
-      </ul>
-      <form class="form">
-        <input
-          class="fms"
-          type="text"
-          name=""
-          id=""
-          placeholder="Username"
-          required
-        />
-        <input
-          class="fms"
-          type="password"
-          name=""
-          id=""
-          placeholder="Password"
-          required
-        />
-        <div class="checkBoxRow">
-          <input type="checkbox" id="signedIn" />
-          <label for="signedIn">Stay signed in?</label>
-        </div>
-        <button type="submit">LOG IN</button>
-        <a href="#forgotPass">Forgot Password?</a>
-        <a class="hid" href="/mains/comingsoon.html">cs</a>
-      </form>
+
+    @media (max-width: 500px) {
+      body {
+        align-items: flex-start;
+        padding-top: 20px;
+        min-height: 100svh;
+      }
+
+      .card {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+        padding: 20px;
+        border-radius: 16px;
+      }
+
+      #logo {
+        width: 55%;
+        padding: 20px;
+      }
+
+      ul {
+        padding: 30px 30px;
+        font-size: 14px;
+      }
+
+      .fms {
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 14px;
+      }
+
+      .form a {
+        font-size: 13px;
+      }
+    }
+
+    @media(min-width : 300px) and (max-width : 400px) {
+      .card {
+        width: 80%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card cardLig">
+    <div class="logoImg">
+      <img id="logo" src="/resources/download.png" alt="Spotify logo" />
+      <!-- <p>Login</p> -->
     </div>
-    <script>
-      let btn = document.querySelector("button");
-      let hid = document.querySelector(".hid")
-      btn.addEventListener("click",function(){
-        hid.click();
-      })
-    </script>
-  </body>
+    <ul>
+      <li><a class="nav" href="index.html">LOG IN</a></li>
+      <li><a class="nav" href="/mains/signup.html">SIGN UP</a></li>
+    </ul>
+    <form class="form">
+      <input class="fms" type="text" name="" id="" placeholder="Username" required />
+      <input class="fms" type="password" name="" id="" placeholder="Password" required />
+      <div class="checkBoxRow">
+        <input type="checkbox" id="signedIn" />
+        <label for="signedIn">Stay signed in?</label>
+      </div>
+      <button type="submit">LOG IN</button>
+      <a href="#forgotPass">Forgot Password?</a>
+      <a class="hid" href="/mains/comingsoon.html">cs</a>
+    </form>
+  </div>
+  <script>
+    let btn = document.querySelector("button");
+    let hid = document.querySelector(".hid")
+    btn.addEventListener("click", function () {
+      hid.click();
+    })
+  </script>
+</body>
+
 </html>

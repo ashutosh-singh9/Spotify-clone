@@ -20,14 +20,15 @@
         background-size: cover;
       }
       .card {
-        /* background-color: #2e2f34; */
-        /* background-image: radial-gradient(circle,black 0%, #48494b 100%); */
-        background-image: radial-gradient(
-          circle,
-          black 0%,
-          rgb(24, 34, 18) 50%,
-          #48494b 100%
+        background: radial-gradient(
+        circle at top,
+        rgba(30, 215, 96, 0.18),
+        rgba(0, 0, 0, 0.75) 65%
         );
+        background-color: rgba(0,0,0,0.3);
+
+
+backdrop-filter: blur(12px) saturate(160%) ;
 
         padding: 0px 30px 30px 30px;
         width: 400px;
@@ -35,10 +36,10 @@
         border-radius: 20px;
         transform: scale(1);
         box-shadow: 5px 5px 20px #48494b;
-        transition: transform 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
       .card:hover {
-        /* transform: scale(1.05); */
+        backdrop-filter: blur(18px) saturate(160%) ;
         box-shadow: 7px 7px 25px #48494b;
       }
       .logoImg {
